@@ -1,0 +1,511 @@
+/*--------------------------------------------------------------
+>>>>>> CSSeco Styles(usualy overwrite bootsrap styles :))
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+	#  Imports
+	##  Fonts
+    ##  Bootstrap
+	#  CSSeco Variables
+	#  Overides(bs)
+	#  Helper Classes
+	#  CSSeco Styles
+	## Body
+	## Header
+	## Footer
+	## Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#  Imports 
+##  Fonts
+--------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900');
+@import url('../fonts/fonts.css');
+
+/*--------------------------------------------------------------
+#  Imports
+##  Bootstrap
+--------------------------------------------------------------*/
+//@import "../../vendor/bs4/scss/bootstrap";
+
+/*--------------------------------------------------------------
+#  CSSeco Variables
+--------------------------------------------------------------*/
+/* BreakPoint */
+$csseco_bp_340	:    340px	!default;
+$csseco_bp_401	:    401px	!default;
+$csseco_bp_431	:    431px	!default;
+$csseco_bp_432	:    432px	!default;
+$csseco_bp_481	:    481px	!default;
+$csseco_bp_494	:    494px	!default;
+$csseco_bp_556	:    556px	!default;
+$csseco_bp_575	:    575px	!default;
+$csseco_bp_576	:    576px	!default;
+$csseco_bp_661	:    661px	!default;
+$csseco_bp_767	:    767px	!default;
+$csseco_bp_768	:    768px	!default;
+$csseco_bp_769	:    769px	!default;
+$csseco_bp_847	:    847px	!default;
+$csseco_bp_871	:    871px	!default;
+$csseco_bp_906	:    906px	!default;
+$csseco_bp_926	:    926px	!default;
+$csseco_bp_921	:    921px	!default;
+$csseco_bp_992	:    992px	!default;
+$csseco_bp_993	:    993px	!default;
+$csseco_bp_1201	:    1201px	!default;
+
+/*--------------------------------------------------------------
+#  Overides(bs)
+--------------------------------------------------------------*/
+body {
+	font-family: 'Roboto', sans-serif; 
+}
+
+/*--------------------------------------------------------------
+#  Helper Classes
+--------------------------------------------------------------*/
+.posrel {
+	position: relative!important;
+}
+
+.elem-hidden {
+	display: none!important;
+}
+
+.elem-hidden-m {
+	display: none;
+	@media screen and (min-width: $csseco_bp_992) {
+		display: block;
+	}
+}
+
+
+.table {
+  display: table;
+  width: 100%;
+  height: 100%;
+  .table-cell {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+/*--------------------------------------------------------------
+#  CSSeco Styles
+## Body
+--------------------------------------------------------------*/
+div#site-wrapper {
+
+/*--------------------------------------------------------------
+#  CSSeco Styles
+## Header
+--------------------------------------------------------------*/
+	header#header {
+		padding: 20px 0;
+		img.site-logo {
+			display: block;
+			margin: 0 auto;
+			max-height: 50px;
+			@media screen and (min-width: $csseco_bp_768) {
+				margin: 0;
+			}
+			@media screen and (min-width: $csseco_bp_992) {
+				max-height: 70px;
+			}
+		}
+	}
+	
+/*--------------------------------------------------------------
+#  CSSeco Styles
+## Footer
+--------------------------------------------------------------*/
+	footer#footer {
+		background: #353535;
+		color: #FFF;
+		font-size: 12px;
+		padding: 20px 0;
+		text-align: center;
+		figure {
+			max-width: 336px;
+			height: 64px;
+			background: url(../imgs/footer/icons-mobile.png)center no-repeat;
+			background-size: contain;
+			margin: 0 auto 20px;
+			@media screen and (min-width: $csseco_bp_768) {
+				max-width: 628px;
+				background-image: url(../imgs/footer/icons.png);
+			}
+		}
+	}
+	
+/*--------------------------------------------------------------
+#  CSSeco Styles
+## Content
+--------------------------------------------------------------*/
+	section#section1.subHeader {
+		line-height: normal;
+		padding: 10px 0 10px;
+		background:  no-repeat top left /cover;
+		background-image: url(../imgs/section1/bgSubHeader.jpg);
+		background-position: top left;
+		background-repeat: no-repeat;
+		background-size: cover;		
+		border-color: #106b71;
+		border-style: solid;
+		border-width: 10px 0 10px;
+		min-height: 240px;
+		overflow: hidden;
+		position: relative;
+		@media screen and (min-width: $csseco_bp_576) {
+			padding: 30px 0 10px;
+		}
+		.container {
+			position: relative;
+			&::after {
+				background-image: url(../imgs/section1/bgSect1_240.png);
+				background-position: top left;
+				background-repeat: no-repeat;
+				background-size: cover;
+				content: "";
+				display: none;
+				height: 260px;
+				position: absolute;
+				right: -420px;
+				top: -26px;
+				width: 686px;
+				@media screen and (min-width: $csseco_bp_768) {
+					display: block;
+				}
+				@media screen and (min-width: $csseco_bp_992) {
+					display: block;
+					right: -210px;
+				}
+				@media screen and (min-width: $csseco_bp_1201) {
+					display: block;
+					right: -130px;
+				}
+			}
+		}
+		h1 {
+			color: #FFF;
+			font-size: 24px;
+			margin: 0 0 20px;
+			text-transform: uppercase;
+			@media screen and (min-width: $csseco_bp_768) {
+				font-size: 32px;
+			}
+			@media screen and (min-width: $csseco_bp_992) {
+				font-size: 38px;
+			}
+			span {
+				color: #0fbbb6;
+			}
+		}
+		h2 {
+			color: #0fbbb6;
+			font-size: 20px;
+			font-weight: bold;
+			margin: 0 0 10px;
+			@media screen and (min-width: $csseco_bp_768) {
+				font-size: 28px;
+			}
+			@media screen and (min-width: $csseco_bp_992) {
+				font-size: 32px;
+				padding: 0 30px 0 0;
+			}
+		}
+		p {
+			color: #FFF;
+			font-size: 14px;
+			margin: 0;
+			@media screen and (min-width: $csseco_bp_992) {
+				padding: 0 40px 0 0; 
+			}
+			@media screen and (min-width: $csseco_bp_1201) {
+				padding: 0 50px 0 0; 
+			}
+			@media screen and (min-width: $csseco_bp_1201) {
+				font-size: 16px;
+			}
+			img {
+				display: block;
+				float: right; 
+				margin: 0 0 0 5px;
+				max-width: 90px;
+				@media screen and (min-width: $csseco_bp_768) {
+					display: none;
+				}
+			}
+		}
+	}
+	section#section2.form_and_bullets {
+		padding: 20px 0 0 0;
+		@media screen and (min-width: $csseco_bp_768) {
+			border-top: 10px solid #606060;
+			margin: 90px 0 0 0;
+		}
+		.bullets {
+			margin-top: 30px;
+			@media screen and (min-width: $csseco_bp_768) {
+				margin-top: 0;
+			}
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				li {
+					margin: 0 0 20px;
+					text-align: center;
+					&::before,
+					&::after {
+						clear: both;
+						content: "";
+						display: table;
+					}
+					@media screen and (min-width: $csseco_bp_576) {
+						margin: 0 0 30px;
+					}
+					.proc {
+						background: rgba(34,109,112, .2);
+						border: 1px solid #226D70;
+						border-radius: 50%;
+						height: 110px;
+						margin: 0 auto;
+						overflow: hidden;
+						padding: 15px;
+						position: relative;
+						width: 110px;
+						@media screen and (min-width: $csseco_bp_576) {
+							float: left;
+						}
+						&::after {
+							background: rgba(34,109,112, .5);
+							content: "";
+							display: block;
+							height: 100%;
+							left: -90px;
+							position: absolute;
+							top: 0;
+							transform: rotate(45deg);
+							width: 100%;
+							z-index: -1;
+						}
+						.proc-inner {
+							background: #226D70;
+							border-radius: 50%;
+							color: #FFF;
+							line-height: 0;
+							position: relative;
+							text-align: center;
+							z-index: 2;
+							.proc-inner-txt {
+								font-size: 24px;
+								font-weight: bold;
+							}
+						}
+					}
+					.cntnt {
+						position: relative;
+						@media screen and (min-width: $csseco_bp_576) {
+							padding: 20px 0 0 130px;
+							text-align: left;
+						}
+						@media screen and (min-width: $csseco_bp_576) and (max-width: $csseco_bp_767) {
+							&::after {
+								background: rgba(34,109,112,0.3);
+								bottom: -13px;
+								content: "";
+								display: block;
+								height: 10px;
+								position: absolute;
+								right: 0;
+								width: 90%;
+							}
+						}
+						@media screen and (min-width: $csseco_bp_992) {
+							&::after {
+								background: rgba(34,109,112,0.3);
+								bottom: -13px;
+								content: "";
+								display: block;
+								height: 10px;
+								position: absolute;
+								right: 0;
+								width: 90%;
+							}
+						}
+						h3 {
+							color: #226D70;
+							font-size: 24px;
+							font-weight: bold;
+							text-transform: uppercase;
+							@media screen and (min-width: $csseco_bp_576) {
+								font-size: 20px;
+							}
+						}	
+						p {
+							font-size: 14px;
+							line-height: 1;
+						}
+					}
+				}
+			}
+		}
+		.form-and-ttl-wrapper {
+			-webkit-box-shadow: 0px 0px 14px 5px rgba(50, 50, 50, 0.27);
+			-moz-box-shadow:    0px 0px 14px 5px rgba(50, 50, 50, 0.27);
+			box-shadow:         0px 0px 14px 5px rgba(50, 50, 50, 0.27);
+			margin: 0 0 20px;
+			padding: 0 20px 20px;
+			@media screen and (min-width: $csseco_bp_768) {
+				background: #FFF;
+				margin: -90px 0 0 0;
+			}
+			.form-ttl {
+				/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,cfcfd0+100 */
+				background: #ffffff; /* Old browsers */
+				background: -moz-linear-gradient(top, #ffffff 0%, #cfcfd0 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(top, #ffffff 0%,#cfcfd0 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to bottom, #ffffff 0%,#cfcfd0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cfcfd0',GradientType=0 ); /* IE6-9 */
+				border-radius: 7px;
+				h3 {
+					font-size: 20px;
+					margin: 0 0 15px;
+					padding: 10px 0;
+					text-align: center;
+					@media screen and (min-width: $csseco_bp_576) {
+						font-size: 24px;
+					}
+					@media screen and (min-width: $csseco_bp_992) {
+						padding: 15px 0;
+					}
+					@media screen and (min-width: $csseco_bp_1201) {
+						font-size: 26px;
+						padding: 20px 0;
+					}
+				}
+			}
+			.form-wrap {
+				.formEl {
+					label.label {
+						float: left;
+						font-weight: bold;
+						margin: 0;
+						padding: 10px 0 0 0;
+						width: 30%;
+					}
+					input[type="text"],
+					input[type="email"],
+					input[type="tel"],
+					select {
+						background: #D6D6D7;
+						border: medium none;
+						border-radius: 5px;
+						margin: 0 0 10px;
+						max-width: 100%;
+						padding: 5px 10px;
+						width: 100%;
+						@media screen and (min-width: $csseco_bp_576) {
+							padding: 10px 15px;
+						}
+						@media screen and (min-width: $csseco_bp_992) {
+							max-width: 70%;
+							&::-webkit-input-placeholder {
+								color: transparent;
+							}
+						}
+					}	
+					input.phone-prefix {
+						border-right: 1px solid #eee;
+						border-top-right-radius: 0;
+						border-bottom-right-radius: 0;
+						float: left;
+						width: 25%;
+						@media screen and (min-width: $csseco_bp_576) {
+							width: 20%;
+						}
+					}
+					input.phone-number {
+						border-top-left-radius: 0;
+						border-bottom-left-radius: 0;
+						float: left;
+						max-width: 75%;
+						@media screen and (min-width: $csseco_bp_576) {
+							max-width: 80%;
+						}
+						@media screen and (min-width: $csseco_bp_992) {
+							max-width: 50%;
+						}
+					}
+					&.agreementC {
+						margin: 10px 0;
+						input[type="checkbox"],
+						label {
+							display: inline;
+						}
+					}
+					&.formbuttonspart {
+						margin-top: 10px;
+						text-align: center;
+						@media screen and (min-width: $csseco_bp_768) {
+							text-align: right;
+						}
+						button.frombuttonclass,
+						div#checksubmit {
+							background: #37BEB5;
+							border-color: #195E5B;
+							border-radius: 5px;
+							border-style: solid;
+							border-width: 0 2px 2px 0;
+							color: #FFF;
+							display: block;
+							float: none;
+							max-width: 230px;
+							margin: 0 auto;
+							padding: 7px 25px;
+							@media screen and (min-width: $csseco_bp_768) {
+								float: right;
+							}
+						}
+						div#checksubmit {
+							display: none;
+							opacity: .5;
+						}
+					}
+					
+					.inputerror,
+					.agreementerror {
+						position: relative;
+						font-size: 12px;
+						@media screen and (min-width: $csseco_bp_992) {
+							text-align: right;
+							&.agreementerror {
+								text-align: left;
+							}
+						}
+					}
+					.inputerror {
+						top: -10px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
